@@ -1,25 +1,26 @@
-streamlit==1.29.0
+# requirements.txt (Streamlit Cloud friendly — numpy first, pinned python-friendly faiss wheel)
+pip>=23.0
+setuptools>=65.0.0
+wheel
 
-openai==1.13.3
+# core numerical libs (numpy first so faiss wheel can install)
+numpy==1.26.4
+faiss-cpu==1.7.4
+
+# Streamlit app & utilities
+streamlit==1.29.0
 requests==2.31.0
 python-dotenv==1.0.1
-
-faiss-cpu==1.7.4
-numpy==1.26.4
-
 PyPDF2==3.0.1
-
 tqdm==4.66.1
 
+# Langchain core only if you use it
 langchain-core==0.1.36
 
-pydantic==1.10.14
-pandas==2.1.4
-
-gitpython==3.1.40
-
-# LLM + Embeddings support
+# Retry and async helpers
 tenacity==8.2.3
+nest-asyncio==1.5.8
 
-# Fix for async issues and event loop on Streamlit Cloud
-nest-asyncio==1.5.
+# Optional useful libraries
+pandas==2.1.4
+gitpython==3.1.40
