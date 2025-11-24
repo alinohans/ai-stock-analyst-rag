@@ -2,25 +2,23 @@ pip>=23.0
 setuptools>=65.0.0
 wheel
 
-streamlit==1.30.0
-
-# OpenAI SDK
-openai==1.14.2
-
-requests==2.31.0
-python-dotenv==1.0.1
-
+# numerical libs (numpy first)
 numpy==1.26.4
 faiss-cpu==1.13.0
 
+# core app
+streamlit==1.30.0
+openai==1.14.2
+httpx==0.24.1
+requests==2.31.0
+python-dotenv==1.0.1
 PyPDF2==3.0.1
 tqdm==4.66.1
 
-langchain-core==0.1.36
-
+# small helpers
 tenacity==8.2.3
 nest-asyncio==1.5.8
 
+# optional analytics (keep only if used)
 pandas==2.1.4
 gitpython==3.1.40
-
